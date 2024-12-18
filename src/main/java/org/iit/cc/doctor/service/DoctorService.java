@@ -14,6 +14,15 @@ public class DoctorService {
     private DoctorRepository repository;
 
     /**
+     * Retrieve all doctors.
+     *
+     * @return List of all doctors
+     */
+    public List<Doctor> getAllDoctors() {
+        return repository.findAll();
+    }
+
+    /**
      * Add a new doctor.
      *
      * @param doctor Doctor details to add

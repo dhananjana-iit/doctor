@@ -82,4 +82,14 @@ public class DoctorController {
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("Doctor Service is UP");
     }
+
+    /**
+     * Retrieve all doctors.
+     *
+     * @return ResponseEntity with a list of all doctors
+     */
+    @GetMapping("/all")
+    public ResponseEntity<List<Doctor>> getAllDoctors() {
+        return ResponseEntity.ok(doctorService.getAllDoctors());
+    }
 }
