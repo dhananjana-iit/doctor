@@ -80,7 +80,7 @@ public class DoctorController {
      */
     @GetMapping("/health")
     public ResponseEntity<String> healthCheck() {
-        return ResponseEntity.ok("Doctor Service is UP");
+        return ResponseEntity.ok("Doctor-Service is UP");
     }
 
     /**
