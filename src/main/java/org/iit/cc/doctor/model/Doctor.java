@@ -3,6 +3,7 @@ package org.iit.cc.doctor.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Document
@@ -12,6 +13,7 @@ public class Doctor {
     private String name;
     private String specialization;
     private String contact;
+    private LocalDateTime reg_date;
     private List<Availability> availability;
 
     // Getters and Setters
@@ -54,5 +56,13 @@ public class Doctor {
 
     public void setAvailability(List<Availability> availability) {
         this.availability = availability;
+    }
+
+    public LocalDateTime getReg_date() {
+        return reg_date;
+    }
+
+    public void setReg_date(LocalDateTime reg_date) {
+        this.reg_date = reg_date;
     }
 }

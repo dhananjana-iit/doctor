@@ -65,6 +65,7 @@ public class DoctorService {
         existingDoctor.setSpecialization(updatedDoctor.getSpecialization());
         existingDoctor.setContact(updatedDoctor.getContact());
         existingDoctor.setAvailability(updatedDoctor.getAvailability());
+        existingDoctor.setReg_date(updatedDoctor.getReg_date());
         return repository.save(existingDoctor);
     }
 
